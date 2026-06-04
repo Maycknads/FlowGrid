@@ -1,20 +1,18 @@
-body { background: #0b0e14; color: #e0e0e0; font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; padding: 20px; }
-.container { width: 100%; max-width: 900px; background: #151921; padding: 20px; border-radius: 15px; border: 1px solid #2d3436; }
-h1 { color: #00f2ff; text-align: center; letter-spacing: 2px; }
+body { background: #0b0e14; color: #e0e0e0; font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; padding: 15px; }
+.container { width: 100%; max-width: 600px; background: #151921; padding: 20px; border-radius: 15px; border: 1px solid #2d3436; }
+h1 { color: #00f2ff; text-align: center; font-size: 1.5rem; }
 h1 span { color: #fff; }
-.input-group { display: flex; gap: 10px; margin-bottom: 20px; }
-input, select { flex: 1; padding: 12px; background: #1c222d; border: 1px solid #333; color: white; border-radius: 8px; }
-button { padding: 12px 20px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; transition: 0.3s; }
+.input-group { display: flex; gap: 8px; margin-bottom: 15px; width: 100%; }
+input, select { flex: 1; padding: 12px; background: #1c222d; border: 1px solid #333; color: white; border-radius: 8px; font-size: 14px; }
+button { padding: 10px 15px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; }
 .btn-neon { background: #00f2ff; color: #000; }
-.btn-neon:hover { box-shadow: 0 0 15px #00f2ff; }
 
-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-td { border: 1px solid #333; padding: 10px; text-align: center; }
+table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 12px; }
+th, td { border: 1px solid #333; padding: 8px 4px; text-align: center; }
+th { color: #00f2ff; background: #1c222d; }
 
-/* Responsividade Mobile */
 @media (max-width: 600px) {
     .input-group { flex-direction: column; }
-    input, select, button { width: 100%; }
-    table { font-size: 12px; }
-    td { padding: 5px; }
+    input, select, button { width: 100%; box-sizing: border-box; }
+    table { font-size: 10px; }
 }
