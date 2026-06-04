@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>FlowGrid | Gaming Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1><span>FLOW</span>GRID</h1>
+        <div class="input-group">
+            <input type="text" id="taskInput" placeholder="Nome da Tarefa...">
+            <button class="btn-neon" onclick="createTask()">CRIAR HÁBITO</button>
+        </div>
+        <div class="input-group">
+            <select id="taskSelector" onchange="renderTable()">
+                <option value="">Selecione uma tarefa</option>
+            </select>
+            <button class="btn-danger" onclick="deleteTask()">DELETAR</button>
+        </div>
+        <div id="tableContainer"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
