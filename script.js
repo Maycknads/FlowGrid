@@ -11,6 +11,17 @@ function updateSelector() {
     });
 }
 
+function updateCounter() {
+    const index = document.getElementById('taskSelector').value;
+    const counterDiv = document.getElementById('counter');
+    if (index === "") { counterDiv.innerText = ""; return; }
+    
+    // Soma quantos checkboxes estão como 'true'
+    let count = 0;
+    tasks[index].data.forEach(row => row.forEach(val => { if (val) count++; }));
+    counterDiv.innerText = `Total: ${count} dias`;
+}
+
 function createTask() {
     const input = document.getElementById('taskInput');
     if (!input.value) return;
@@ -27,13 +38,14 @@ function deleteTask() {
     tasks.splice(index, 1);
     localStorage.setItem('myTasks', JSON.stringify(tasks));
     document.getElementById('tableContainer').innerHTML = "";
+    updateCounter();
     updateSelector();
 }
 
 function renderTable() {
     const container = document.getElementById('tableContainer');
     const index = document.getElementById('taskSelector').value;
-    if (index === "") { container.innerHTML = ""; return; }
+    if (index === "") { container.innerHTML = ""; updateCounter(); return; }
     
     const dias = ['SEG', 'TER', 'QUA', 'QUI', 'SEX', 'SÁB', 'DOM'];
     let header = dias.map(d => `<th>${d}</th>`).join('');
@@ -51,11 +63,13 @@ function renderTable() {
             if(cb) cb.checked = checked;
         });
     });
+    updateCounter();
 }
 
 function saveCheck(taskIdx, rowIdx, colIdx) {
     tasks[taskIdx].data[rowIdx][colIdx] = document.getElementById(`check-${rowIdx}-${colIdx}`).checked;
     localStorage.setItem('myTasks', JSON.stringify(tasks));
+    updateCounter();
 }
 
 updateSelector();
