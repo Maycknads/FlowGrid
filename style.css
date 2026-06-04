@@ -16,5 +16,5 @@ td:last-child { border-right: 1px solid #333; border-radius: 0 8px 8px 0; }
 input[type="checkbox"] { accent-color: #00f2ff; transform: scale(1.6); cursor: pointer; }
 
 /* Animação das Bolhas */
-/*.bubble { position: fixed; background: rgba(0, 242, 255, 0.2); border-radius: 50%; animation: float 3s linear forwards; pointer-events: none; z-index: 999; }
-/*@keyframes float { 0% { bottom: -50px; opacity: 1; } 100% { bottom: 100vh; opacity: 0; } }
+.bubble { position: fixed; background: rgba(0, 242, 255, 0.2); border-radius: 50%; animation: float 3s linear forwards; pointer-events: none; z-index: 999; }
+@keyframes float { 0% { bottom: -50px; opacity: 1; } 100% { bottom: 100vh; opacity: 0; } }
