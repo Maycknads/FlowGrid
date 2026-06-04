@@ -1,0 +1,20 @@
+body { background: #0b0e14; color: #e0e0e0; font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; padding: 40px; overflow-x: hidden; }
+.container { width: 100%; max-width: 900px; background: #151921; padding: 30px; border-radius: 15px; border: 1px solid #2d3436; box-shadow: 0 0 20px rgba(0, 255, 255, 0.1); position: relative; z-index: 1; }
+h1 { color: #00f2ff; text-align: center; letter-spacing: 2px; }
+h1 span { color: #fff; }
+.input-group { display: flex; gap: 10px; margin-bottom: 20px; }
+input, select { flex: 1; padding: 12px; background: #1c222d; border: 1px solid #333; color: white; border-radius: 8px; }
+button { padding: 12px 20px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; transition: 0.3s; }
+.btn-neon { background: #00f2ff; color: #000; }
+.btn-neon:hover { box-shadow: 0 0 15px #00f2ff; }
+.btn-danger { background: #ff4757; color: white; }
+table { width: 100%; border-collapse: separate; border-spacing: 0 10px; margin-top: 20px; }
+th { color: #00f2ff; padding: 15px; }
+td { background: #1c222d; padding: 15px; text-align: center; border-top: 1px solid #333; border-bottom: 1px solid #333; }
+td:first-child { border-left: 1px solid #333; border-radius: 8px 0 0 8px; }
+td:last-child { border-right: 1px solid #333; border-radius: 0 8px 8px 0; }
+input[type="checkbox"] { accent-color: #00f2ff; transform: scale(1.6); cursor: pointer; }
+
+/* Animação das Bolhas */
+.bubble { position: fixed; background: rgba(0, 242, 255, 0.2); border-radius: 50%; animation: float 3s linear forwards; pointer-events: none; z-index: 999; }
+@keyframes float { 0% { bottom: -50px; opacity: 1; } 100% { bottom: 100vh; opacity: 0; } }
